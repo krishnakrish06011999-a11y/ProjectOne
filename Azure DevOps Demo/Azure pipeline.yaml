@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+
+- script: |
+    echo "Files in the repo:"
+    ls
+  displayName: 'List Files'
+
+- script: |
+    echo "Pipeline executed successfully"
+  displayName: 'Demo Step'
